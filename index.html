@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sketch</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
+  </head>
+
+  <body>
+    <!-- 漢堡按鈕 -->
+    <button id="hamburger" aria-label="開啟選單" aria-expanded="false">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+    <!-- 側邊選單 -->
+    <nav id="sidebar" aria-hidden="true">
+      <div class="sidebar-inner">
+        <h2>導覽</h2>
+        <ul>
+          <li><a href="#" data-url="https://950902katherine-droid.github.io/20251014/" rel="noopener">第一單元作品</a></li>
+          <li><a href="#" data-url="https://hackmd.io/@RbOrXZtpR8u7UUX3kVIiZA/BJlPgF_khxx" rel="noopener">第一單元筆記</a></li>
+          <li><a href="#" data-url="https://950902katherine-droid.github.io/2025111111/" rel="noopener">測驗系統</a></li>
+          <li><a href="#" data-url="https://www.tku.edu.tw/" rel="noopener">淡江大學</a></li>
+          <!-- 自我介紹（使用專案內相對路徑） -->
+          <li><a href="#" data-img="images/8F1702FF-9BAB-419C-BEC1-36F8424C5490.png">自我介紹</a></li>
+          <li><a href="#home">回到首頁</a></li>
+        </ul>
+      </div>
+      <button id="sidebar-close" class="sr-only">關閉選單</button>
+    </nav>
+
+    <!-- 暗色遮罩（側邊選單已使用） -->
+    <div id="overlay" tabindex="-1" aria-hidden="true"></div>
+
+    <!-- Modal（內嵌小視窗）——改為可顯示 iframe 或 inline 內容 -->
+    <div id="modalOverlay" class="modal-overlay" aria-hidden="true">
+      <div id="modal" role="dialog" aria-modal="true" aria-label="外部連結視窗">
+        <button id="modalClose" aria-label="關閉視窗">&times;</button>
+        <!-- modalContent 會動態放入 iframe 或 inline HTML -->
+        <div id="modalContent" class="modal-content"></div>
+      </div>
+    </div>
+
+    <script src="menu.js"></script>
+    <script src="color_settings.js"></script>
+    <script src="sketch.js"></script>
+  </body>
+</html>
